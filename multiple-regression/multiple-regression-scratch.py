@@ -8,7 +8,7 @@ from sklearn.metrics import root_mean_squared_error
 from sklearn.model_selection import train_test_split
 
 # loading dataset
-sales = pd.read_csv("multiple-regression\sales.csv", dtype = np.float64)
+sales = pd.read_csv("multiple-regression/sales.csv", dtype = np.float64)
 
 print(sales.head())
 
@@ -20,6 +20,7 @@ print(sales.head())
 print(sales.shape)
 
 # visualizing data
+"""
 plt.figure(figsize = (15,5))
 plt.subplot(3,3,1)
 sns.regplot(x = 'TV', y ='sales', data = sales, marker = 'x', color = 'lightblue')
@@ -27,7 +28,7 @@ plt.subplot(3,3,2)
 sns.regplot(x = 'radio', y ='sales', data = sales, marker = 'x', color = 'lightblue')
 plt.subplot(3,3,3)
 sns.regplot(x = 'newspaper', y ='sales', data = sales, marker = 'x', color = 'lightblue')
-
+"""
 # plt.show()
 
 
@@ -84,7 +85,6 @@ class multipleregression:
     loss = self.loss(ytest, yhat)
     return loss
     
-  
   
 X = sales[['TV','radio','newspaper']]
 y = sales['sales']

@@ -8,7 +8,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 
 # loading dataset
-sales = pd.read_csv("multiple-regression\sales.csv")
+sales = pd.read_csv("multiple-regression/sales.csv")
 
 print(sales.head())
 print(sales.shape)
